@@ -11,9 +11,17 @@ Cross-platform C++ software synthesizer based on OneLoneCoder's Synthesizer seri
 clang++ -std=c++17 1.cpp -o synth \
 -framework AudioToolbox \
 -framework CoreAudio \
--framework AudioUnit
+-framework AudioUnit \
+-framework ApplicationServices \
+-framework CoreFoundation
+```
+After compiles successfully, you can run the synth with:
+
+```
 ./synth
 ```
+
+
 
 ### Windows
 
