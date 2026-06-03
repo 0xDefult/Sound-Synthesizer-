@@ -146,3 +146,7 @@ clang++ 3.cpp -std=c++17 \
 -framework CoreAudio \
 -framework AudioUnit
 ```
+
+## Ai use
+ * Cross-Platform Debugging: Identifying and fixing deep C++ issues that caused silent audio on macOS, including a 1Hz math bug in 1.cpp, a memory initialization error in 2.cpp, and a 32-bit float mismatch in the CoreAudio engine.
+ * Packaging & Release: Writing the terminal scripts to wrap your raw C++ binary into a professional, double-clickable macOS .dmg
