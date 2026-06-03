@@ -238,7 +238,7 @@
             Destroy();
         }
 
-        bool Create(unsigned int nSampleRate = 44100, unsigned int nChannels = 1, unsigned int nBlocks = 8, unsigned int nBlockSamples = 512)
+      bool Create(unsigned int nSampleRate = 44100, unsigned int nChannels = 1, unsigned int nBlocks = 8, unsigned int nBlockSamples = 512)
         {
             m_bReady = false;
             m_nSampleRate = nSampleRate;
@@ -249,6 +249,9 @@
             m_nBlockCurrent = 0;
             m_userFunction = nullptr;
             m_userFunctionSimple = nullptr;
+            
+            // ---> ADD THIS EXACT LINE HERE <---
+            m_dGlobalTime.store(0.0);
 
             // Set up an AudioUnit that pulls samples from us (kAudioUnitSubType_HALOutput is for input only,
             // so use kAudioUnitSubType_DefaultOutput which is the default output device).

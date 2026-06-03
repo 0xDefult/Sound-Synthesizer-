@@ -110,22 +110,22 @@
     static char macKeycodeToAscii(uint16_t keycode)
     {
         switch (keycode) {
-            case kVK_ANSI_A: return 'a'; case kVK_ANSI_B: return 'b';
-            case kVK_ANSI_C: return 'c'; case kVK_ANSI_D: return 'd';
-            case kVK_ANSI_E: return 'e'; case kVK_ANSI_F: return 'f';
-            case kVK_ANSI_G: return 'g'; case kVK_ANSI_H: return 'h';
-            case kVK_ANSI_I: return 'i'; case kVK_ANSI_J: return 'j';
-            case kVK_ANSI_K: return 'k'; case kVK_ANSI_L: return 'l';
-            case kVK_ANSI_M: return 'm'; case kVK_ANSI_N: return 'n';
-            case kVK_ANSI_O: return 'o'; case kVK_ANSI_P: return 'p';
-            case kVK_ANSI_Q: return 'q'; case kVK_ANSI_R: return 'r';
-            case kVK_ANSI_S: return 's'; case kVK_ANSI_T: return 't';
-            case kVK_ANSI_U: return 'u'; case kVK_ANSI_V: return 'v';
-            case kVK_ANSI_W: return 'w'; case kVK_ANSI_X: return 'x';
-            case kVK_ANSI_Y: return 'y'; case kVK_ANSI_Z: return 'z';
-            case kVK_ANSI_Comma:  return ',';
-            case kVK_ANSI_Period: return '.';
-            case kVK_ANSI_Slash:  return '/';
+            case kVK_ANSI_A: return 'A'; case kVK_ANSI_B: return 'B';
+            case kVK_ANSI_C: return 'C'; case kVK_ANSI_D: return 'D';
+            case kVK_ANSI_E: return 'E'; case kVK_ANSI_F: return 'F';
+            case kVK_ANSI_G: return 'G'; case kVK_ANSI_H: return 'H';
+            case kVK_ANSI_I: return 'I'; case kVK_ANSI_J: return 'J';
+            case kVK_ANSI_K: return 'K'; case kVK_ANSI_L: return 'L';
+            case kVK_ANSI_M: return 'M'; case kVK_ANSI_N: return 'N';
+            case kVK_ANSI_O: return 'O'; case kVK_ANSI_P: return 'P';
+            case kVK_ANSI_Q: return 'Q'; case kVK_ANSI_R: return 'R';
+            case kVK_ANSI_S: return 'S'; case kVK_ANSI_T: return 'T';
+            case kVK_ANSI_U: return 'U'; case kVK_ANSI_V: return 'V';
+            case kVK_ANSI_W: return 'W'; case kVK_ANSI_X: return 'X';
+            case kVK_ANSI_Y: return 'Y'; case kVK_ANSI_Z: return 'Z';
+            case kVK_ANSI_Comma:  return '\xbc'; // Windows VK_OEM_COMMA
+            case kVK_ANSI_Period: return '\xbe'; // Windows VK_OEM_PERIOD
+            case kVK_ANSI_Slash:  return '\xbf'; // Windows VK_OEM_2
             case kVK_ANSI_0: return '0'; case kVK_ANSI_1: return '1';
             case kVK_ANSI_2: return '2'; case kVK_ANSI_3: return '3';
             case kVK_ANSI_4: return '4'; case kVK_ANSI_5: return '5';

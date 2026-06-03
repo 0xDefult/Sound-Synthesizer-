@@ -22,14 +22,14 @@ double d12thRootOf2 = pow(2.0, 1.0 / 12.0);     // 12 notes per octave in wester
 // returns the amplitude (between -1.0 and +1.0) at the given time
 double MakeNoise(double dTime)
 {
-    // start with whatever frequency the keyboard set
-    double dOutput = dFrequencyOutput;
+    double dOutput = 0.0; // Start at 0 (silence)
 
-    // if there's a frequency, make sound - otherwise return silence
-    if (dOutput != 0.0)
+    // if there's a frequency, make sound
+    if (dFrequencyOutput != 0.0)
     {
-        // basic sine wave: sin(2 * pi * frequency * time)
-        dOutput *= sin(dTime * 2.0 * 3.14159);
+        // Correct math: sin(2 * pi * frequency * time)
+        // Multiplied by 0.5 to lower the volume so it doesn't blast your ears
+        dOutput = 0.5 * sin(dTime * 2.0 * 3.14159 * dFrequencyOutput);
     }
 
     return dOutput;
