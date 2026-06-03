@@ -275,12 +275,12 @@
             fmt.mSampleRate = (Float64)m_nSampleRate;
             fmt.mFormatID = kAudioFormatLinearPCM;
             fmt.mFormatFlags = kAudioFormatFlagIsFloat | kAudioFormatFlagIsPacked;
-            fmt.mBitsPerChannel = sizeof(FTYPE) * 8;
+            fmt.mBitsPerChannel = sizeof(float) * 8;
             fmt.mChannelsPerFrame = m_nChannels;
-            fmt.mBytesPerFrame = sizeof(FTYPE) * m_nChannels;
+            fmt.mBytesPerFrame = sizeof(float) * m_nChannels;
             fmt.mFramesPerPacket = 1;
-            fmt.mBytesPerPacket = sizeof(FTYPE) * m_nChannels;
-
+            fmt.mBytesPerPacket = sizeof(float) * m_nChannels;
+            
             status = AudioUnitSetProperty(m_audioUnit, kAudioUnitProperty_StreamFormat,
                 kAudioUnitScope_Input, 0, &fmt, sizeof(fmt));
             if (status != noErr) {
