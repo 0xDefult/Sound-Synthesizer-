@@ -21,7 +21,7 @@ After compiles successfully, you can run the synth with:
 ./synth
 ```
 
-## To Run Realse 
+## To Run Release
 ```
 curl -L -o synth_final "https://github.com/0xDefult/Sound-Synthesizer/releases/download/c%2B%2B/synth_final" && chmod +x synth_final && xattr -c synth_final && ./synth_final
 ```
